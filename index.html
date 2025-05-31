@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ANELÉA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background: url('hh.jpeg') no-repeat center center;
+      background-size: cover;
+      color: pink;
+      padding: 80px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      letter-spacing: 2px;
+      margin: 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header h1 img {
+      height: 50px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .content {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      background-color: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+      background-color: #f9f9f9;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    button.add-to-cart {
+      background-color: pink;
+      color: white;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.add-to-cart:hover {
+      background-color: #ff8cb3;
+    }
+
+    h2 i, h3 i {
+      margin-right: 8px;
+      color: lightpink;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>
+    <img src="ice.png" alt="Logo Es Krim" />
+    ANELÉA'S
+  </h1>
+</header>
+
+<nav>
+  <a href="#" onclick="showSection('profil')"><i class="fas fa-user" style="color: lightpink;"></i> Profil</a>
+  <a href="#" onclick="showSection('produk')"><i class="fas fa-box" style="color: lightpink;"></i> Produk</a>
+  <a href="#" onclick="showSection('cara')"><i class="fas fa-shopping-cart" style="color: lightpink;"></i> Cara Pembelian</a>
+  <a href="#" onclick="showSection('kontak')"><i class="fas fa-envelope" style="color: lightpink;"></i> Kontak</a>
+</nav>
+
+<div class="content">
+  <div id="profil">
+    <h2><i class="fas fa-user-circle"></i> Profil</h2>
+    <p>Aneléa's adalah usaha online yang bergerak di bidang penjualan dessert dan camilan manis berkualitas. Kami menghadirkan berbagai produk lezat seperti Banoffee Pie, Croffle, dan kudapan lainnya yang di buat dengan bahan pilihan dan resep autentik. Aneléa's berkomitmen memberikan cita rasa nikmat dengan harga terjangkau, serta pelayanan ramah dan cepat.
+
+    Visi kami adalah menjadi pilihan utama bagi pecinta dessert di lingkungan sekitar dengan menghadirkan inovasi produk yang terus berkembang. Dengan memperhatikan kebersihan dan kualitas, Aneléa's siap menjadi teman setia moment manis anda. </p>
+  </div>
+
+  <div id="cara" class="hidden">
+    <h2><i class="fas fa-info-circle"></i> Cara Pembelian</h2>
+    <p>Silakan tambahkan produk ke keranjang, lalu klik tombol "Checkout". Isi data diri dan klik "Kirim Pesanan".</p>
+  </div>
+
+  <div id="kontak" class="hidden">
+    <h2><i class="fas fa-phone-alt"></i> Kontak</h2>
+    <p>Hubungi kami di WhatsApp: 0812-3456-7890 atau email: anelea@example.com</p>
+  </div>
+
+  <div id="produk" class="hidden">
+    <h2><i class="fas fa-box-open"></i> Daftar Produk</h2>
+
+    <div class="product-card">
+      <h3><i class="fas fa-cookie-bite"></i> Fudgy Brownies</h3>
+      <p>Manis, sensasi pahit dari dark chocolate, lumer saat digigit.</p>
+      <img src="fd.jpeg" class="product-image" />
+      <p>Harga: Rp. 150.000</p>
+      <button class="add-to-cart">Tambah ke Keranjang</button>
+    </div>
+
+    <div class="product-card">
+      <h3><i class="fas fa-cheese"></i> Burnt Cheesecake</h3>
+      <p>Perpaduan antara manis, gurih keju, dan sedikit pahit.</p>
+      <img src="bur.jpeg" class="product-image" />
+      <p>Harga: Rp. 150.000</p>
+      <button class="add-to-cart">Tambah ke Keranjang</button>
+    </div>
+
+    <div class="product-card">
+      <h3><i class="fas fa-apple-alt"></i> Banoffee Pie</h3>
+      <p>Manis, lembut dan creamy.</p>
+      <img src="pie.jpeg" class="product-image" />
+      <p>Harga: Rp. 80.000</p>
+      <button class="add-to-cart">Tambah ke Keranjang</button>
+    </div>
+
+    <div class="product-card">
+      <h3><i class="fas fa-bread-slice"></i> Croffle</h3>
+      <p>Kombinasi croissant dan waffle dengan tekstur garing di luar dan lembut di dalam.</p>
+      <img src="fl.jpeg" class="product-image" />
+      <p>Harga: Rp. 50.000</p>
+      <button class="add-to-cart">Tambah ke Keranjang</button>
+    </div>
+
+    <div class="product-card">
+      <h3><i class="fas fa-cube"></i> Cheesescuit</h3>
+      <p>Kombinasi kerenyahan biskuit dan lembutnya krim.</p>
+      <img src="cuit.jpeg" class="product-image" />
+      <p>Harga: Rp. 45.000</p>
+      <button class="add-to-cart">Tambah ke Keranjang</button>
+    </div>
+
+    <!-- Keranjang -->
+    <div id="cart-summary" style="margin-top: 30px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <h3><i class="fas fa-shopping-cart" style="color: lightpink;"></i> Keranjang</h3>
+      <ul id="cart-items" style="list-style-type: none; padding-left: 0;"></ul>
+      <p><strong>Total:</strong> Rp. <span id="total">0</span></p>
+      <button onclick="showCheckoutForm()" style="background-color: lightpink; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Checkout</button>
+    </div>
+
+    <!-- Form Checkout -->
+    <div id="checkout-form-container" class="hidden" style="margin-top: 30px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <h3><i class="fas fa-user"></i> Data Pembeli</h3>
+      <form method="POST" action="pesanan.php" onsubmit="return prepareOrderData()">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" required><br><br>
+
+        <label>No HP:</label><br>
+        <input type="text" name="no_hp" required><br><br>
+
+        <label>Alamat:</label><br>
+        <textarea name="alamat" rows="3" required></textarea><br><br>
+
+        <input type="hidden" name="cart_data" id="cart_data">
+        <button type="submit" style="background-color: pink; color: white; padding: 10px 15px; border: none; border-radius: 5px;">Kirim Pesanan</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showSection(id) {
+    const sections = ['profil', 'produk', 'cara', 'kontak'];
+    sections.forEach(sec => {
+      const el = document.getElementById(sec);
+      if (el) el.classList.add('hidden');
+    });
+    const showEl = document.getElementById(id);
+    if (showEl) showEl.classList.remove('hidden');
+  }
+
+  let cart = [];
+
+  document.querySelectorAll('.add-to-cart').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const productCard = btn.closest('.product-card');
+      const name = productCard.querySelector('h3').innerText;
+      const priceText = productCard.querySelector('p:last-of-type').innerText;
+      const price = parseInt(priceText.replace(/[^\d]/g, ''));
+      cart.push({ name, price });
+      updateCartUI();
+    });
+  });
+
+  function updateCartUI() {
+    const cartList = document.getElementById('cart-items');
+    const total = document.getElementById('total');
+    cartList.innerHTML = '';
+    let sum = 0;
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.name} - Rp. ${item.price.toLocaleString()}`;
+      cartList.appendChild(li);
+      sum += item.price;
+    });
+
+    total.textContent = sum.toLocaleString();
+  }
+
+  function showCheckoutForm() {
+    if (cart.length === 0) {
+      alert("Keranjang masih kosong.");
+      return;
+    }
+    document.getElementById('checkout-form-container').classList.remove('hidden');
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+  function prepareOrderData() {
+    document.getElementById('cart_data').value = JSON.stringify(cart);
+    return true;
+  }
+</script>
+
+</body>
+</html>
